@@ -16,10 +16,12 @@ public class Main {
 		
 		InstructorManager instructorManager = new InstructorManager();
 		instructorManager.add(instructor1);
+		instructorManager.update(instructor1);
 		
 		System.out.println("***********************");
 		
 		StudentManager studentManager = new StudentManager();
 		studentManager.add(student1);
+		studentManager.update(student1);
 	}
 }
