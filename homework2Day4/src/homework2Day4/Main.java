@@ -16,11 +16,11 @@ public class Main {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) throws NumberFormatException, RemoteException {
+	public static void main(String[] args) {
 		
 		
 		BaseCustomerManager customerManager = new StarbucksCustomerManager(new MernisServiceAdapter());
-		customerManager.save(new Customer(1, "VEHBİ ERBİL", "KARAKUŞ", 1986, "46072366712"));
+		customerManager.save(new Customer(1, "VEHBİ ERBİL", "KARAKUŞ", 1986, "111111111111"));
 		
 		System.out.println("");
 		
