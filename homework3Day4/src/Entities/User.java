@@ -1,23 +1,18 @@
 package Entities;
 
-public class Customer{
-
-	public int id;
-	public String firstName;
-	public String lastName;
-	public int dateOfBirth;
-	public String nationalityId;
+public class User {
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String nationalityId;
+	private int dateOfBirth;
 	
-	public Customer() {
-
-	}
-	
-	public Customer(int id, String firstName, String lastName, int dateOfBirth, String nationalityId) {
+	public User(int id, String firstName, String lastName, String nationalityId, int dateOfBirth) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
 		this.nationalityId = nationalityId;
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public int getId() {
@@ -44,20 +39,20 @@ public class Customer{
 		this.lastName = lastName;
 	}
 
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
 	public String getNationalityId() {
 		return nationalityId;
 	}
 
 	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
+	}
+
+	public int getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(int dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 	
 }

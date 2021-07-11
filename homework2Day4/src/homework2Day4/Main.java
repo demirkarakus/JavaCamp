@@ -1,7 +1,6 @@
 package homework2Day4;
 
 import java.rmi.RemoteException;
-import java.time.LocalDate;
 
 import Abstract.BaseCustomerManager;
 import Adapters.MernisServiceAdapter;
@@ -22,18 +21,5 @@ public class Main {
 		BaseCustomerManager customerManager = new StarbucksCustomerManager(new MernisServiceAdapter());
 		customerManager.save(new Customer(1, "VEHBİ ERBİL", "KARAKUŞ", 1986, "111111111111"));
 		
-		System.out.println("");
-		
-		/*
-		KPSPublicSoapProxy kpsPublic = new KPSPublicSoapProxy();
-		boolean result = kpsPublic.TCKimlikNoDogrula(
-				Long.parseLong("46072366712"),
-				"VEHBİ ERBİL",
-				"KARAKUŞ",
-				1986);
-		System.out.println("Doğrulama : " + (result ? "Başarılı Giriş" : "Başarısız Giriş"));
-		*/
-
 	}
-
 }
