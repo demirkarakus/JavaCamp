@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlamaio.northwind.business.abstracts.ProductService;
 import kodlamaio.northwind.entities.concretes.Product;
 
+//RestController yani RestFul çalışacaksın demek
 @RestController
 @RequestMapping("/api/products")
 public class ProductsController {
