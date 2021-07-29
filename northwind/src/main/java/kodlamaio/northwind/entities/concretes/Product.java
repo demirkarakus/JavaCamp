@@ -3,21 +3,26 @@ package kodlamaio.northwind.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity //Veri tabanı nesnesisin demek
 @Table(name = "products") //Verinin veri tabanında hangi tabloya karşılık geleceğini belirtiyoruz
+@AllArgsConstructor //Lombok tüm argümanaları kullanarak constructor ekliyor
+@NoArgsConstructor //Lombok parametresiz contrustor ekliyor
 public class Product {
  
     @Id
-	@GeneratedValue //Id'nin bir bir arttırılacağını söyledik
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Id'nin bir bir arttırılacağını söyledik
 	
     @Column(name = "product_id") //Veri tabanında hanig kolona karşılık geliyorsa onu yazıyoruz
-    private String id;
+    private int id;
  
 	@Column(name="category_id")
 	private int categoryId;
@@ -34,17 +39,4 @@ public class Product {
 	@Column(name="quentity_per_unit")
 	private String quantityPerUnit;
 
-	public Product() {}
-	
-	public Product(String id, int categoryId, String productName, double unitPrice, short unitsInStock,
-			String quantityPerUnit) {
-		super();
-		this.id = id;
-		this.categoryId = categoryId;
-		this.productName = productName;
-		this.unitPrice = unitPrice;
-		this.unitsInStock = unitsInStock;
-		this.quantityPerUnit = quantityPerUnit;
-	}
-	
 } 
